@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Strength Checker</title>
+</head>
+<body>
+    <div>
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password"><br><br>
+       <button onclick="checkStrength()" id="submit">Submit</button>
+    </div>
+
+    <script>
+        function checkStrength() {
+            let password = document.getElementById('password').value;
+            let strengthDisplay = document.getElementById("submit");
+            
+            // Check password length
+            if (password.length <=4) {
+                alert("password is weak")
+                password.style.display="none"
+            } else if (password.length <=8) {
+                alert("password is medium")
+                password.style.display="none"
+            } else {
+             alert("password is strong")
+            }
+        }
+    </script>
+</body>
+</html>
